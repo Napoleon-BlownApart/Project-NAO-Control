@@ -184,11 +184,11 @@ def JointControl(clientID,motionProxy,i,Body):
     while(vrep.simxGetConnectionId(clientID)!=-1):
         #Getting joint's angles from Choregraphe (please check your robot's IP)
         commandAngles = motionProxy.getAngles('Body', False)
-        jointList = motionProxy.getBodyNames('Body')
+#       jointList = motionProxy.getBodyNames('Body')
+#       commandLen = len(commandAngles)
+#       print '*** CommandAngles length = ' + str(commandLen)
+#       for joint in jointList: print joint
         #Allow the robot to move in VRep using choregraphe's angles
-        commandLen = len(commandAngles)
-        print '*** CommandAngles length = ' + str(commandLen)
-        for joint in jointList: print joint
         #Head
         vrep.simxSetJointTargetPosition(clientID,Body[0][i],commandAngles[0],vrep.simx_opmode_streaming)
         vrep.simxSetJointTargetPosition(clientID,Body[1][i],commandAngles[1],vrep.simx_opmode_streaming)
