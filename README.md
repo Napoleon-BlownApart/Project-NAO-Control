@@ -11,6 +11,9 @@ In addition to v-rep we will use the Choregraphe suite and the Python NAOqi SDK 
 
 > N.B : To download the Aldebaran related softwares you must pocess a NAO or join their [developper program]
 
+**Note**  This has been fixed to work with *choregraphe-suite-2.4.3.28-linux64*.  It appears there have been some API changes along the way.
+
+
 ### Quickstart guide
 - Launch v-rep and load the scene contained in the *Vrep-scene* folder
 - Go to your choregraphe suite folder, then in the bin folder and launch *naoqi-bin* to create a virtual NAO on your computer
